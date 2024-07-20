@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
         print('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         dialogueBox(context, "Wrong password provided for that user");
-        print('The account already exists for that email.');
+        print('The account already exists');
       }
       setState(() {
         isLoading = false;
