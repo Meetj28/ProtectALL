@@ -19,7 +19,7 @@ class Primarybutton extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 18, color: Colors.white),
         ),
         style: ElevatedButton.styleFrom(
             backgroundColor: kColorRed,

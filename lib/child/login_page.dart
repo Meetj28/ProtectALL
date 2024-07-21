@@ -5,10 +5,10 @@ import 'package:women_safety_app/components/custom_textfield.dart';
 import 'package:women_safety_app/components/primarybutton.dart';
 import 'package:women_safety_app/components/secondarybutton.dart';
 import 'package:women_safety_app/database/shared_pref.dart';
-import 'package:women_safety_app/home_screen.dart';
+import 'package:women_safety_app/child/bottom_screens/home_screen.dart';
 import 'package:women_safety_app/parent/parent_home.dart';
 import 'package:women_safety_app/parent/register_parent.dart';
-import 'package:women_safety_app/register_child.dart';
+import 'package:women_safety_app/child/register_child.dart';
 import 'package:women_safety_app/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {

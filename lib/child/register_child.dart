@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:women_safety_app/components/custom_textfield.dart';
 import 'package:women_safety_app/components/primarybutton.dart';
 import 'package:women_safety_app/components/secondarybutton.dart';
-import 'package:women_safety_app/login_page.dart';
+import 'package:women_safety_app/child/login_page.dart';
 import 'package:women_safety_app/model/userModel.dart';
 import 'package:women_safety_app/utils/constants.dart';
 
