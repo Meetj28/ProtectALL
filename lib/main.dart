@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
         // Theme.of(context),textTheme,
       ),
        home:
+       // HomeScreen(),
        // MySharedPreference.getUserType() == "child"
       //   ? HomeScreen()
       //     : MySharedPreference.getUserType() == "parent"
