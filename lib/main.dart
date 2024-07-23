@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:women_safety_app/child/bottom_bar.dart';
+import 'package:women_safety_app/child/bottom_screens/add_contacts.dart';
+import 'package:women_safety_app/child/bottom_screens/contacts.dart';
 import 'package:women_safety_app/database/shared_pref.dart';
 import 'package:women_safety_app/child/bottom_screens/home_screen.dart';
 import 'package:women_safety_app/child/login_page.dart';

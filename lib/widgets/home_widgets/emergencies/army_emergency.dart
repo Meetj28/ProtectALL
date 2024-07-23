@@ -54,7 +54,7 @@ class ArmyEmergency extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 fontSize: MediaQuery.of(context).size.width*0.06,
                               ),),
-                            Text('National counter Terrorism Authority',
+                            Text('National counter Terrorism',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,

@@ -20,6 +20,7 @@ class TContact {
   set number(String newNumber) => this._number = newNumber;
   set name(String newName) => this._name = newName;
 
+  //convert a Contact object to a Map object
   Map<String, dynamic> toMap() {
     var map = new Map<String, dynamic>();
 
@@ -29,7 +30,8 @@ class TContact {
 
     return map;
   }
-  
+
+  //Extract a Contact Object from a Map object
   TContact.fromMapObject(Map<String, dynamic> map) {
     this._id = map['id'];
     this._number = map['number'];
