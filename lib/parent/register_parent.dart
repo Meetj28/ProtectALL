@@ -152,7 +152,7 @@ class _RegisterParentScreenState extends State<RegisterParentScreen> {
                           ),
                           SizedBox(height: 10),
                           CustomTextfield(
-                            hintText: 'enter email',
+                            hintText: 'enter parent email',
                             textInputAction: TextInputAction.next,
                             keyboardtype: TextInputType.emailAddress,
                             prefix: Icon(Icons.person),

@@ -45,7 +45,7 @@ class ParentHomeScreen extends StatelessWidget {
         stream: FirebaseFirestore.instance
             .collection('users')
             .where('type', isEqualTo: 'child')
-            .where('guardiantEmail',
+            .where('parentEmail',
             isEqualTo: FirebaseAuth.instance.currentUser!.email)
             .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {

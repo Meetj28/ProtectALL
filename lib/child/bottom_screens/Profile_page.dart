@@ -69,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
       setState(() {
         nameC.text = value.docs.first['name'];
         childEmailC.text = value.docs.first['childEmail'];
-        guardianEmailC.text = value.docs.first['guardiantEmail'];
+        guardianEmailC.text = value.docs.first['parentEmail'];
         phoneC.text = value.docs.first['phone'];
         id = value.docs.first.id;
         profilePic = value.docs.first['profilePic'];

@@ -7,8 +7,12 @@ import '../../parent/parent_home.dart';
 import '../../utils/constants.dart';
 import '../login_page.dart';
 
+
+
 class CheckUserStatusBeforeChat extends StatelessWidget {
   const CheckUserStatusBeforeChat({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -88,13 +92,23 @@ class _ChatPageState extends State<ChatPage> {
         stream: FirebaseFirestore.instance
             .collection('users')
             .where('type', isEqualTo: 'parent')
-            .where('childEmail',
+            .where('parentEmail',
             isEqualTo: FirebaseAuth.instance.currentUser!.email)
             .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(child: progressIndicator(context));
           }
+          print("object");
+          print("object");
+          print("object");
+          print("object");
+          print("object");
+          print("object");print("object");
+          print("object");
+          print("object");
+          print("object");
+          print("object");
           return ListView.builder(
             itemCount: snapshot.data!.docs.length,
             itemBuilder: (BuildContext context, int index) {
@@ -128,3 +142,27 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 }
+
+
+Future<String?> getParentEmail() async {
+  try {
+    // Fetch the current user's document from Firestore
+    var userDoc = await FirebaseFirestore.instance
+        .collection('users')
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .get();
+
+    // Assuming the parentEmail field is present in the user's document
+    if (userDoc.exists && userDoc.data() != null) {
+      return userDoc.data()!['parentEmail'] as String?;
+    } else {
+      return null;
+    }
+  } catch (e) {
+    print('Error fetching parent email: $e');
+    return null;
+  }
+}
+// getParentEmail() {
+//
+// }
