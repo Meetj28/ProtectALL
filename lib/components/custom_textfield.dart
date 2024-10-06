@@ -14,12 +14,14 @@ class CustomTextfield extends StatelessWidget {
   final FocusNode? focusNode;
   final Widget? prefix;
   final Widget? suffix;
+  final bool readOnly;
 
   CustomTextfield(
   {this.check,
       this.controller,
       this.textInputAction,
       this.enable = true,
+      this.readOnly = false,
       this.focusNode,
       this.hintText,
       this.isPassword = false,
@@ -38,6 +40,7 @@ class CustomTextfield extends StatelessWidget {
         enabled: enable == true ? true : enable,
         maxLines: maxLines == null? 1 : maxLines,
         onSaved: onsave,
+        readOnly: readOnly,
         focusNode: focusNode,
         keyboardType: keyboardtype == null ? TextInputType.name : keyboardtype,
         textInputAction: textInputAction,

@@ -12,12 +12,30 @@ import 'package:women_safety_app/child/register_child.dart';
 import 'package:women_safety_app/utils/constants.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
+// Future<void> initializeApp() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   // Other initializations if needed
+//   await Firebase.initializeApp();
+//   // Additional setups if needed
+// }
+//
+// void main() async {
+//   await initializeApp();
+//   runApp(MyApp());
+// }
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  MySharedPreference.init();
+  await MySharedPreference.init();
+  // await initializeService();
   runApp(const MyApp());
 }
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -35,27 +53,28 @@ class MyApp extends StatelessWidget {
         // Theme.of(context),textTheme,
       ),
        home:
-       // HomeScreen(),
+        LoginScreen(),
+       // ParentHomeScreen(),
        // MySharedPreference.getUserType() == "child"
-      //   ? HomeScreen()
-      //     : MySharedPreference.getUserType() == "parent"
-      //   ? ParentHomeScreen()
-      //     : LoginScreen()
-      FutureBuilder(
-        future: MySharedPreference.getUserType(),
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
-          if (snapshot.data == "") {
-            return LoginScreen();
-          }
-          if (snapshot.data == "child") {
-            return BottomBar();
-          }
-          if (snapshot.data == "parent") {
-            return ParentHomeScreen();
-          }
-          return progressIndicator(context);
-        },
-      ),
+       //  ? RegisterChildScreen()
+       //    : MySharedPreference.getUserType() == "parent"
+       //  ? ParentHomeScreen()
+       //    : LoginScreen()
+      // FutureBuilder(
+      //   future: MySharedPreference.getUserType(),
+      //   builder: (BuildContext context, AsyncSnapshot snapshot) {
+      //     if (snapshot.data == "") {
+      //       return LoginScreen();
+      //     }
+      //     if (snapshot.data == "child") {
+      //       return BottomBar();
+      //     }
+      //     if (snapshot.data == "parent") {
+      //       return ParentHomeScreen();
+      //     }
+      //     return progressIndicator(context);
+      //   },
+      // ),
     );
    }
  }

@@ -5,6 +5,7 @@ class UserModel{
   String? childEmail;
   String? parentEmail;
   String? type;
+  String? profilePic;
 
   UserModel({
     this.name,
@@ -12,6 +13,7 @@ class UserModel{
     this.childEmail,
     this.parentEmail,
     this.phone,
+    this.profilePic,
     this.type,
 });
 
@@ -22,5 +24,6 @@ class UserModel{
     'childEmail' : childEmail,
     'parentEmail' : parentEmail,
     'type': type,
+    'profilePic': profilePic
   };
 }

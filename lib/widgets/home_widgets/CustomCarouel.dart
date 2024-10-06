@@ -36,7 +36,7 @@ class CustomCarouel extends StatelessWidget {
                         context,
                         SafeWebView(
                             url:
-                                "https://www.livemint.com/market/stock-market-news/budget-2024-d-street-experts-see-profit-booking-if-nifty-hits-25k-predict-heightened-volatility-ahead-11720540276490.html"));
+                                "https://indianexpress.com/"));
                   } else if (index == 1) {
                     navigateToRoute(
                         context,

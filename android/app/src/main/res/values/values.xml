@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Firebase API Key -->
+    <string name="firebase_api_key" translatable="false">AIzaSyBw-J2w-UE74g-HEdzX8VFAMZtQuZrRBjg</string>
+
+    <!-- Firebase Project ID -->
+    <string name="firebase_project_id" translatable="false">safety-application-sos</string>
+
+    <!-- Firebase Project Number -->
+    <string name="firebase_project_number" translatable="false">714991255437</string>
+
+    <!-- Firebase App ID -->
+    <string name="firebase_app_id" translatable="false">1:714991255437:android:22427f6d90e341615c87c4</string>
+
+    <!-- Firebase Storage Bucket -->
+    <string name="firebase_storage_bucket" translatable="false">safety-application-sos.appspot.com</string>
+
+    <!-- Package Name -->
+    <string name="firebase_package_name" translatable="false">com.example.women_safety_app</string>
+</resources>
