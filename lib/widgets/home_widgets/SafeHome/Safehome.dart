@@ -188,7 +188,7 @@ class _SafeHomeState extends State<SafeHome> {
                   )),
               ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset('assets/route.jpg')),
+                  child: Image.asset('assets/rouuute.jpeg')),
             ],
           ),
         ),
