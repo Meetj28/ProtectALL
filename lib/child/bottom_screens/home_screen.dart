@@ -321,6 +321,7 @@ class _HomeScreenState extends State<HomeScreen> {
         _currentAddress =
         "${place.locality}, ${place.postalCode}, ${place.street}";
       });
+
     } catch (e) {
       Fluttertoast.showToast(msg: e.toString());
     }
