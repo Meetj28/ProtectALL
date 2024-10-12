@@ -76,7 +76,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                     radius: 80,
                     child: Center(
                         child: Image.asset(
-                          'assets/add_pic.png',
+                          'assets/2246807_instagram_person_profile_user_icon.png',
                           height: 80,
                           width: 80,
                           fit: BoxFit.cover,

@@ -84,6 +84,7 @@ class _ChatPageState extends State<ChatPage> {
     // WidgetsBinding.instance.addObserver();
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.pink,
         // backgroundColor: Color.fromARGB(255, 250, 163, 192),
         title: Text("SELECT GUARDIAN"),

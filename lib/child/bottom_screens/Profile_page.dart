@@ -119,20 +119,26 @@ class _ProfilePageState extends State<ProfilePage> {
                         }
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(100)
+                              
+                        ),
                         child: profilePic == null
                             ? CircleAvatar(
-                          backgroundColor: Colors.deepPurple,
+                          backgroundColor: Colors.white,
                           radius: 80,
+
                           child: Center(
                               child: Image.asset(
-                                'assets/add_pic.png',
+                                'assets/2246807_instagram_person_profile_user_icon.png',
                                 height: 80,
                                 width: 80,
                               )),
                         )
                             : profilePic!.contains('http')
                             ? CircleAvatar(
-                          backgroundColor: Colors.deepPurple,
+                          backgroundColor: Colors.grey,
                           radius: 80,
                           backgroundImage:
                           NetworkImage(profilePic!),
@@ -233,16 +239,37 @@ class _ProfilePageState extends State<ProfilePage> {
     uploadImage(profilePic!).then((value) {
       Map<String, dynamic> data = {
         'name': nameC.text,
-        'profilePic': downloadUrl,
+        'profilePic': downloadUrl,  // Add the image download URL to the user's Firestore document
       };
       FirebaseFirestore.instance
           .collection('users')
           .doc(FirebaseAuth.instance.currentUser!.uid)
-          .update(data);
+          .update(data);  // Update the user document in Firestore
       setState(() {
         isSaving = false;
-        goTo(context, BottomBar());
+        goTo(context, BottomBar());  // Redirect after update
       });
     });
   }
+
+
+// update() async {
+  //   setState(() {
+  //     isSaving = true;
+  //   });
+  //   uploadImage(profilePic!).then((value) {
+  //     Map<String, dynamic> data = {
+  //       'name': nameC.text,
+  //       'profilePic': downloadUrl,
+  //     };
+  //     FirebaseFirestore.instance
+  //         .collection('users')
+  //         .doc(FirebaseAuth.instance.currentUser!.uid)
+  //         .update(data);
+  //     setState(() {
+  //       isSaving = false;
+  //       goTo(context, BottomBar());
+  //     });
+  //   });
+  // }
 }
